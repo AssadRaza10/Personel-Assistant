@@ -3,7 +3,10 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 from sentence_transformers import SentenceTransformer
 import pickle
 import numpy as np
+from pathlib import Path
 from pypdf import PdfReader
+
+BASE_DIR = Path(__file__).resolve().parent
 
 
 # -------------------------
@@ -71,7 +74,8 @@ def load_models():
 
     embed_model = SentenceTransformer("all-MiniLM-L6-v2")
 
-    with open("vector_db/index.pkl", "rb") as f:
+    vector_path = BASE_DIR / "vector_db" / "index.pkl"
+    with open(vector_path, "rb") as f:
         vector_store = pickle.load(f)
 
     return tokenizer, model, embed_model, vector_store

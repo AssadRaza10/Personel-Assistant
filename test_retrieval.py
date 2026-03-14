@@ -1,6 +1,8 @@
 from backend.retriever import load_vector_store, retrieve
+from pathlib import Path
 
-vector_store = load_vector_store("vector_db/index.pkl")
+BASE_DIR = Path(__file__).resolve().parent
+vector_store = load_vector_store(str(BASE_DIR / "vector_db" / "index.pkl"))
 
 query = "What is Assadullah's email?"
 

@@ -1,6 +1,9 @@
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 from sentence_transformers import SentenceTransformer
 import pickle
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
 
 # -----------------------------
 # Load LLM Model (FLAN-T5)
@@ -8,7 +11,7 @@ import pickle
 
 print("Loading FLAN-T5 model...")
 
-model_path = "./models/flan_t5"
+model_path = BASE_DIR / "models" / "flan_t5"
 
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
@@ -29,7 +32,8 @@ embed_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 print("Loading knowledge base...")
 
-with open("vector_db/index.pkl", "rb") as f:
+vector_path = BASE_DIR / "vector_db" / "index.pkl"
+with open(vector_path, "rb") as f:
     vector_store = pickle.load(f)
 
 

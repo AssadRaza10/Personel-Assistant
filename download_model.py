@@ -1,8 +1,11 @@
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import os
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
 
 model_name = "google/flan-t5-base"
-model_path = "./models/flan_t5"
+model_path = BASE_DIR / "models" / "flan_t5"
 
 print("Downloading FLAN-T5 model...")
 
