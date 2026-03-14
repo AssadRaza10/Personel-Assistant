@@ -1,0 +1,9 @@
+Name: Assadullah
+
+Degree: Bachelor of Computer Science
+
+University: LUAWMS
+
+Skills: Python, Machine Learning, Data Science, OpenCV, SQL, WordPress
+
+Email: assad.raza.101@gmail.com

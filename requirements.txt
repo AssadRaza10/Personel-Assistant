@@ -1,0 +1,15 @@
+torch
+transformers
+sentence-transformers
+pypdf
+faiss-cpu
+fastapi
+uvicorn
+langchain
+pydantic
+python-dotenv
+tqdm
+numpy
+pandas
+scikit-learn
+streamlit

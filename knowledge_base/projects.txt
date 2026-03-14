@@ -1,0 +1,8 @@
+Project: Signify
+Description: Real-time Urdu sign language translation system using deep learning.
+
+Project: Resume Analyzer
+Description: A system that analyzes resumes using NLP.
+
+Project: Spam Mail Detector
+Description: Machine learning model that detects spam emails.
